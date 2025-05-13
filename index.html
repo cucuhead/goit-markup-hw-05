@@ -68,7 +68,6 @@
             </li>
             <li>
               <svg class="icon icon-Icon-3">
-                ./images/icons.svg#icon-Ellipse-3
                 <use xlink:href=" ./images/icons.svg#icon-Icon-3"></use>
               </svg>
               <h3>Diligence</h3>
@@ -374,7 +373,84 @@
             </ul>
           </li>
         </ul>
+
+        <form name="subs_form">
+          <label class="subs-label" for="subscription">Subscribe</label>
+          <div class="subsdiv">
+            <input
+              style="background-image: none"
+              autocomplete="off"
+              inputmode="none"
+              spellcheck="false"
+              type="email"
+              id="subscription"
+              name="email_subs"
+              placeholder="E-mail"
+            />
+            <button class="subs-btn">
+              <p>Subscription</p>
+
+              <svg class="icon-paperplane">
+                <use xlink:href="./images/icons.svg#icon-paperplane"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </footer>
+      <div class="modal">
+        <form name="modal-form" class="modal-form">
+          <svg class="icon-cancel-circle">
+            <use xlink:href="./images/icons.svg#icon-cancel-circle"></use>
+          </svg>
+
+          <p>Leave your contacts and we will call you back</p>
+
+          <div class="form-group">
+            <label for="modal-name">Name</label>
+            <input type="text" id="modal-name" name="username" />
+            <svg class="icon-user">
+              <use xlink:href="./images/icons.svg#icon-user"></use>
+            </svg>
+          </div>
+
+          <div class="form-group">
+            <label for="modal-phone">Phone</label>
+            <input type="tel" id="modal-phone" name="telephone" />
+            <svg class="icon-phone">
+              <use xlink:href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+
+          <div class="form-group">
+            <label for="modal-email">Email</label>
+            <input type="email" id="modal-email" name="email" />
+            <svg class="icon-envelope">
+              <use xlink:href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+          </div>
+
+          <div class="form-group">
+            <label for="modal-textarea">Comment</label>
+            <textarea
+              id="modal-textarea"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="form-group checkbox-wrapper">
+            <label for="accept" class="checkbox-label">
+              <input type="checkbox" id="accept" name="accept" required />
+              <p>
+                I accept the terms and conditions of the
+                <a href="#">Privacy Policy</a>
+              </p>
+            </label>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

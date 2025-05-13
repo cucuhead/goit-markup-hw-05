@@ -142,6 +142,7 @@ h3 {
   background-color: #f4f4fd;
   padding: 120px 156px;
   gap: 72px;
+  width: 1440px;
 }
 .sectionFour {
   padding: 120px 156px;
@@ -298,7 +299,10 @@ h3 {
 
 footer {
   display: flex;
+
   gap: 120px;
+  width: 1440px;
+  height: 312px;
   background: #2e2f42;
   padding: 100px 156px;
   color: #ffffff;
@@ -359,7 +363,277 @@ footer .icon {
   height: 40px;
   fill: white;
 }
+.subs-label {
+  display: block;
+}
+form {
+  width: 453px;
+  height: 80px;
+}
+.subsdiv {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.subsdiv input {
+  width: 264px;
+  height: 40px;
+  border: solid 1px #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  background-image: none;
+  padding: 10px;
+  caret-color: white;
+}
+
+.subsdiv input::placeholder {
+  background-image: none !important;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto";
+  letter-spacing: 4%;
+  color: #fff;
+}
+.subsdiv input:focus {
+  outline: none;
+  border: 1px solid #fff;
+}
+input:focus::placeholder {
+  opacity: 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+.subs-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 24px 8px 24px;
+  width: 185px;
+  height: 40px;
+  gap: 16px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 4%;
+}
 
 footer a .logo {
   color: #ffffff;
+}
+
+button,
+a,
+input,
+textarea,
+label,
+svg,
+.icon-user use,
+.icon-phone use,
+.icon-envelope use,
+.icon-cancel-circle {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  display: none;
+}
+
+.modal .is-open {
+  display: block;
+}
+
+.is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-form {
+  position: relative;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 408px;
+  height: 672px;
+  padding: 0px 24px 0px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.modal-form > p {
+  color: #2e2f42;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-top: 112px;
+}
+
+.modal-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-form input,
+.modal-form textarea {
+  padding: 16px 16px 16px 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-form .checkbox-label {
+  font-size: 14px;
+  width: 360px;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.modal-form button {
+  padding: 10px;
+  background-color: #4d5ae5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form button:hover {
+  background-color: #404bbf;
+}
+.checkbox-label > p {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 4%;
+
+  color: #757575;
+  font-weight: 400;
+}
+.modal-form .checkbox-label a {
+  text-decoration: underline;
+  color: #1e88e5;
+}
+.modal-form label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 4%;
+  color: #8e8f99;
+}
+textarea::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 4%;
+  color: #2e2f42 40%;
+}
+/* Formun içindeki ikonlar için özel sınıf */
+.form-group {
+  position: relative;
+}
+
+.icon-envelope {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.icon-phone {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.icon-user {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.icon-cancel-circle {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 28px;
+  left: 351px;
+  border-radius: 99px;
+  border: solid 1px;
+  background-color: #e7e9fc;
+  border-color: #0000001a;
+}
+
+.icon-paperplane {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+.form-group input:focus ~ .icon-envelope,
+.form-group input:focus ~ .icon-phone,
+.form-group input:focus ~ .icon-user {
+  fill: #4d5ae5;
+}
+
+.icon-cancel-circle:hover {
+  fill: white;
+  background-color: #4d5ae5;
+  border-color: #4d5ae5;
+}
+.icon-cancel-circle:hover path {
+  fill: #ffffff;
+}
+input[type="checkbox"]:checked,
+input[type="checkbox"]:checked:hover,
+input[type="checkbox"]:checked:focus {
+  accent-color: #4d5ae5;
 }
